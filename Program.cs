@@ -1,6 +1,15 @@
 ﻿using PdfSharpCore.Pdf;
 using PdfSharpCore.Pdf.IO;
 
+if(args.Length == 0)
+{
+
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Please provide input directory");
+    Console.ResetColor(); 
+    return;
+}
+
 Console.WriteLine("Merge in progress...");
 
 var inputDirectory = args[0];
